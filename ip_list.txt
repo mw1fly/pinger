@@ -1,0 +1,8 @@
+8.8.8.8,Google DNS
+1.1.1.1,Cloudflare DNS
+192.168.0.1,Router
+192.168.0.2,Home Assistant
+192.168.0.5,proxmox
+192.168.0.6,pihole
+192.168.0.80,VPN
+192.168.0.100,timepi

@@ -9,16 +9,24 @@ import platform
 import subprocess
 import re
 import sys
-
 import config  # user must copy config.example.py → config.py and fill in real values
+
+# Get absolute path to the directory where this script lives
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# Input file (first argument or default to ip_list.txt in the same folder)
+if len(sys.argv) > 1:
+    ip_file = sys.argv[1]
+else:
+    ip_file = os.path.join(SCRIPT_DIR, "ip_list.txt")
 
 
 # Constants
 PING_INTERVAL = 5  # Seconds between pings
 TIMEOUT_THRESHOLD = 60  # Seconds to consider IP unresponsive
-SOUND_FILE = "notification.wav"  # Path to your sound file (for macOS/Linux)
-IP_FILE = "ip_list.txt"  # File to store IPs and names
-CONFIG_FILE = "config.txt"  # File to store theme preference
+# Notification sound file in the same folder
+SOUND_FILE = os.path.join(SCRIPT_DIR, "notification.wav")
+IP_FILE = os.path.join(SCRIPT_DIR, "ip_list.txt")  # File to store IPs and names
+CONFIG_FILE = os.path.join(SCRIPT_DIR, "config.txt")  # File to store theme preference
 
 # Theme definitions
 THEMES = {

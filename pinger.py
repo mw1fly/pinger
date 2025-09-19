@@ -10,6 +10,9 @@ import subprocess
 import re
 import sys
 
+import config  # user must copy config.example.py → config.py and fill in real values
+
+
 # Constants
 PING_INTERVAL = 5  # Seconds between pings
 TIMEOUT_THRESHOLD = 60  # Seconds to consider IP unresponsive

@@ -1,6 +1,17 @@
+# Python things
 __pycache__/
 *.pyc
+
+# Virtual environment (if you use one)
+.venv/
+
+# Config files / secrets
+config.py
+
+# Logs and runtime outputs
+*.log
+
+# OS / editor files
+.DS_Store
 .idea/
 .vscode/
-.venv/
-config.py
